@@ -2,6 +2,8 @@ import { vertexShaderSource, fragmentShaderSource } from './shaders/parallax.js'
 import { ParticleSystem } from './particles.js';
 import { sound } from './audio.js';
 import { HOTSPOTS, PROJECTS_DATA } from './hotspots.js';
+import studioUrl from '../assets/studio.png';
+import depthUrl from '../assets/depth.png';
 
 class SpatialRoom {
   constructor() {
@@ -81,9 +83,9 @@ class SpatialRoom {
     gl.uniform1f(this.uZoomLoc, 1.0);
     gl.uniform2f(this.uZoomCenterLoc, 0.5, 0.5);
 
-    // Load Textures
-    this.colorTexture = this.loadTexture('/assets/studio.png', 0, this.uTextureLoc);
-    this.depthTexture = this.loadTexture('/assets/depth.png', 1, this.uDepthMapLoc);
+    // Load Textures using bundler-resolved module URLs
+    this.colorTexture = this.loadTexture(studioUrl, 0, this.uTextureLoc);
+    this.depthTexture = this.loadTexture(depthUrl, 1, this.uDepthMapLoc);
 
     this.resize();
   }
