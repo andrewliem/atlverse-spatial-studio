@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Andrew Tanny Liem // AI & EdTech Systems Researcher | Atlverse</title>
+  <meta name="description" content="Andrew Tanny Liem — Computer science lecturer and AI & EdTech researcher at Universitas Klabat. Building intelligent learning systems, network research, and academic tools.">
+  <link rel="canonical" href="https://atlverse.xyz/">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://atlverse.xyz/">
+  <meta property="og:title" content="Andrew Tanny Liem // AI & EdTech Systems Researcher | Atlverse">
+  <meta property="og:description" content="Computer science lecturer and AI researcher building intelligent learning systems, network optimization research, and academic productivity tools.">
+  <meta property="og:image" content="/assets/studio.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Schema.org JSON-LD for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Andrew Tanny Liem",
+    "url": "https://atlverse.xyz",
+    "jobTitle": "Computer Science Lecturer and AI & EdTech Systems Researcher",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Universitas Klabat",
+      "url": "https://www.unklab.ac.id/"
+    },
+    "sameAs": [
+      "https://github.com/andrewtliem",
+      "https://www.linkedin.com/in/andrew-tanny-liem-4a463736/",
+      "https://scholar.google.com/citations?user=UZ-10RkAAAAJ",
+      "https://orcid.org/0000-0002-7167-573X",
+      "https://blog.atlverse.xyz",
+      "https://classroom.atlverse.xyz"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <!-- Crawlable Text Mirror for Search Engines & Screen Readers -->
+  <main class="crawl" aria-hidden="true">
+    <h1>Andrew Tanny Liem</h1>
+    <p>Computer Science Lecturer and AI & EdTech Systems Researcher at Universitas Klabat (UNKLAB). Building intelligent learning systems, network optimization research, and academic productivity tools at Atlverse.</p>
+    <section>
+      <h2>About</h2>
+      <p>Andrew Tanny Liem works at the intersection of teaching, research, and software development — with a focus on tools that reduce learning friction. Atlverse is the personal research-and-build space of Andrew Tanny Liem, where papers become prototypes, prototypes become tools, and tools return to real classrooms.</p>
+      <blockquote>"The true object of education is to restore the image of God in the soul." — Ellen G. White</blockquote>
+    </section>
+    <section>
+      <h2>Research & Publications</h2>
+      <p>Selected publications connecting AI, intelligent networks, and education-focused systems.</p>
+      <ul>
+        <li><a href="https://scholar.google.com/citations?user=UZ-10RkAAAAJ">Google Scholar Profile</a></li>
+        <li><a href="https://orcid.org/0000-0002-7167-573X">ORCID: 0000-0002-7167-573X</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Classroom & Blog</h2>
+      <ul>
+        <li><a href="https://classroom.atlverse.xyz">Classroom — Practical tools tested against real teaching</a></li>
+        <li><a href="https://blog.atlverse.xyz">Blog — Essays on LoRA fine-tuning and AI-native app building</a></li>
+        <li><a href="https://github.com/andrewtliem">GitHub (@andrewtliem)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- WebGL 2.5D Canvas & Ambient Dust Particles -->
+  <div id="canvas-container">
+    <canvas id="webgl-canvas"></canvas>
+    <canvas id="particles-canvas"></canvas>
+  </div>
+
+  <!-- HUD Header Overlay -->
+  <header class="hud-header">
+    <div class="brand-badge">
+      <div class="live-indicator"></div>
+      <span class="brand-title">ANDREW TANNY LIEM // ATLVERSE.XYZ</span>
+    </div>
+    <div class="hud-controls">
+      <button id="sound-toggle" class="btn-icon">🔊 Audio On</button>
+    </div>
+  </header>
+
+  <!-- Interactive Hotspots Layer -->
+  <div id="hotspots-layer"></div>
+
+  <!-- Dynamic Hover Tooltip -->
+  <div id="tooltip"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast"></div>
+
+  <!-- Side-over Drawer Panel -->
+  <div id="side-panel-backdrop"></div>
+  <aside id="side-panel" role="dialog" aria-modal="true">
+    <button id="panel-close-btn" class="panel-close-btn" aria-label="Close">✕</button>
+    <div id="panel-tag" class="panel-tag"></div>
+    <h2 id="panel-title" class="panel-title"></h2>
+    <div id="panel-body" class="panel-body"></div>
+  </aside>
+
+  <!-- Computer Monitor Zoom / Interactive Terminal Modal -->
+  <div id="monitor-modal" role="dialog" aria-modal="true">
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <div class="dot dot-red" id="terminal-close-btn" style="cursor: pointer;"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+        </div>
+        <div class="terminal-title">andrew@atlverse:~/academic-systems</div>
+        <div style="width: 36px;"></div>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-prompt">$ atlverse list --featured-work</div>
+        <div id="projects-container" class="projects-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
